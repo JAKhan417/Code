@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glowing Buttons</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #121212;
+      height: 100vh;
+      margin: 0;
+    }
+    .button-container {
+      display: flex;
+      gap: 20px;
+    }
+    /* Base button styling */
+    .button {
+      position: relative;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #000;
+      border: 2px solid #444;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+    }
+    /* Glowing Effect with Mixed Colors */
+    .button-glow {
+      box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.8),
+                  0 0 30px 10px rgba(255, 0, 0, 0.8),
+                  0 0 45px 15px rgba(0, 255, 255, 0.8);
+    }
+    .button:hover {
+      box-shadow: 0 0 25px 10px rgb(246, 244, 245),
+                  0 0 50px 20px rgb(203, 216, 220),
+                  0 0 75px 30px rgba(0, 255, 255, 1);
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button class="button button-glow">Button 1</button>
+    <button class="button button-glow">Button 2</button>
+    <button class="button button-glow">Button 3</button>
+  </div>
+</body>
+</html>
